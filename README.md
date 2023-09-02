@@ -17,7 +17,7 @@ or
 ```
 $ color-autogen -v <variable> -s <source> -o <output>
 ```
-Options:
+#Options:
 ```
 --variable: used for UIColor.<variable>.nameColor and package name '<Variable>Color'
 --source: Path of the color xcassets
