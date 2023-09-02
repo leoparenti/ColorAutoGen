@@ -1,8 +1,10 @@
-# ColorAutoGen
+# ColorAutoGen 
 
 ColorAutoGen is a swift code generator for iOS (Colors and UIColors) Swift Package.
+
 ColorAutoGen create a Swift Package for your colors from a color xcassets.
 
+Color xcassets -> Swift Package
 # Installation
 ```
 $ git clone https://github.com/leoparenti/ColorAutoGen.git
@@ -21,7 +23,7 @@ for autogen Demo Package
 ```
 $ color-autogen -v yourNamePackage -s Media.xcassets -o ../
 ```
-yourNamePackage will generate YourNamePackageColor Package
+yourNamePackage will generate YourNamePackage**Color** Package
 # Options:
 ```
 --variable: used for UIColor.<variable>.nameColor and package name '<Variable>Color'
