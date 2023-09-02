@@ -19,7 +19,7 @@ $ color-autogen -v <variable> -s <source> -o <output>
 ```
 for autogen Demo Package
 ```
-$ color-autogen -v library -s Media.xcassets -o <YOUR_ABSOLUTE_URL>
+$ color-autogen -v library -s Media.xcassets -o ../
 ```
 #Options:
 ```
