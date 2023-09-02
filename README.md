@@ -11,11 +11,11 @@ $ make
 ```
 #Usage
 ```
-$ color-autogen --variable <variable> --source <source> --output <output>
+$ color-autogen --variable <variable> --source <SOURCE_PATH> --output <OUTPUT_PATH>
 ```
 or
 ```
-$ color-autogen -v <variable> -s <source> -o <output>
+$ color-autogen -v <variable> -s <SOURCE_PATH> -o <OUTPUT_PATH>
 ```
 for autogen Demo Package
 ```
@@ -24,6 +24,7 @@ $ color-autogen -v library -s Media.xcassets -o ../
 #Options:
 ```
 --variable: used for UIColor.<variable>.nameColor and package name '<Variable>Color'
+
 --source: Path of the color xcassets
 --output: Path of the output Package
 
