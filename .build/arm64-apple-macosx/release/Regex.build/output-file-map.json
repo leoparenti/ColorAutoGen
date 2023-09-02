@@ -1,0 +1,37 @@
+{
+  "": {
+    "dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex.d",
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex.o",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/master.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/Foundation+Ranges.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Foundation+Ranges.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Foundation+Ranges~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Foundation+Ranges.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/MatchResult.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/MatchResult.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/MatchResult~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/MatchResult.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/Options.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Options.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Options~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Options.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/Regex.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/String+ReplaceMatching.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/String+ReplaceMatching.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/String+ReplaceMatching~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/String+ReplaceMatching.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/Regex/Source/Regex/ThreadLocal.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/ThreadLocal.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/ThreadLocal~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/ThreadLocal.swiftdeps"
+  }
+}

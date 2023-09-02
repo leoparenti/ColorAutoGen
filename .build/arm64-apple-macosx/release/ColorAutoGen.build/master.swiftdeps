@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "28409d26e4312b75c6d74622ed0485eb097f187d92c7a212070187f9111fa143"
+build_start_time: [1693670552, 135926000]
+build_end_time: [1693670552, 720777000]
+inputs:
+  ? "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/ColorAutoGen.build/DerivedSources/resource_bundle_accessor.swift"
+  : [1693613749, 517481802]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/AutoGenCommand.swift": [1693615709, 538408479]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/ColorsPackageGenerator+.swift": [1693668054, 458366821]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/ColorsPackageGenerator.swift": [1693670397, 975181902]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/PackageGenerator.swift": [1693597063, 109739524]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/Template/Templates.swift": [1693619844, 62138529]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/Utils/ColorAGConstants.swift": [1693608204, 260815572]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/Utils/ColorPackage.swift": [1693653119, 875427615]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/Utils/Shell.swift": [1693599890, 332473833]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/Utils/String+.swift": [1693653287, 141906569]
+  "/Users/leyo/workspace/ColorAutoGen/Sources/ColorAutoGen/main.swift": [1693505846, 385181574]

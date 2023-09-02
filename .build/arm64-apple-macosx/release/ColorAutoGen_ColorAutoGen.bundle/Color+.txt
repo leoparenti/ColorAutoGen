@@ -1,0 +1,24 @@
+{header}
+{usage}
+import SwiftUI
+
+@available(iOS 13.0, *)
+public extension Color {
+    struct {name} {
+{data}
+
+        public static let allColors: [Color] = [
+{all}]
+        }
+
+    static var {variable}: {name}.Type {
+        {name}.self
+    }
+}
+
+@available(iOS 13.0, *)
+internal extension Color {
+    static func create(_ key: ColorKey) -> Color {
+        Color(key.rawValue, bundle: Bundle.module)
+    }
+}

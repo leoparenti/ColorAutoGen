@@ -1,0 +1,17 @@
+{header}
+@testable import {name}
+import XCTest
+import SwiftUI
+
+final class {name}Tests: XCTestCase {
+
+    func testAllColors() throws {
+{data}
+    }
+
+    func test_create() throws {
+        for key in ColorKey.allCases {
+            XCTAssertNotNil(UIColor.create(key))
+        }
+    }
+}

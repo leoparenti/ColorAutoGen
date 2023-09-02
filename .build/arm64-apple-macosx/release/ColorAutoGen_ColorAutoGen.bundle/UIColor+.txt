@@ -1,0 +1,34 @@
+{header}
+{usage}
+import UIKit
+
+public extension UIColor {
+    struct {name} {
+{data}
+
+        public static let allColors: [UIColor] = [
+{all}]
+        }
+
+    static var {variable}: {name}.Type {
+        {name}.self
+    }
+}
+
+extension UIColor {
+    static func create(_ key: ColorKey) -> UIColor? {
+        let color = UIColor(named: key.rawValue, in: Bundle.module, compatibleWith: nil)
+        guard let color else {
+            debugPrint("color \(key.rawValue) not in Colors.xcasset")
+            return nil
+        }
+        
+        return color
+    }
+}
+
+extension UIColor? {
+    var notNilOrClear: UIColor {
+        self ?? .clear
+    }
+}

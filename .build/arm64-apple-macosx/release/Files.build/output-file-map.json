@@ -1,0 +1,12 @@
+{
+  "": {
+    "dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files.d",
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files.o",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/master.swiftdeps"
+  },
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/files/Sources/Files.swift": {
+    "object": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files.swift.o",
+    "swiftmodule": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files~partial.swiftmodule",
+    "swift-dependencies": "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files.swiftdeps"
+  }
+}

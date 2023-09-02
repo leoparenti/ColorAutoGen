@@ -1,0 +1,4 @@
+module Regex {
+    header "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Regex.build/Regex-Swift.h"
+    requires objc
+}

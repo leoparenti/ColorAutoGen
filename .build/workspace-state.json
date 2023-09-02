@@ -1,0 +1,61 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "files",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/johnsundell/files.git",
+          "name" : "Files"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
+            "version" : "4.2.0"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "files"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "regex",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/sharplet/Regex.git",
+          "name" : "Regex"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "76c2b73d4281d77fc3118391877efd1bf972f515",
+            "version" : "2.1.1"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Regex"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "swift-argument-parser",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/apple/swift-argument-parser",
+          "name" : "swift-argument-parser"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "8f4d2753f0e4778c76d5f05ad16c74f707390531",
+            "version" : "1.2.3"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "swift-argument-parser"
+      }
+    ]
+  },
+  "version" : 6
+}

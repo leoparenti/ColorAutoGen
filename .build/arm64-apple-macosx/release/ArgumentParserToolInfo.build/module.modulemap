@@ -1,0 +1,4 @@
+module ArgumentParserToolInfo {
+    header "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/ArgumentParserToolInfo.build/ArgumentParserToolInfo-Swift.h"
+    requires objc
+}

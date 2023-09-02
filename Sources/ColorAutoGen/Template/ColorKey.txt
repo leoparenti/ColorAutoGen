@@ -1,0 +1,6 @@
+{header}
+public enum ColorKey: String, CaseIterable {
+
+{data}
+
+}

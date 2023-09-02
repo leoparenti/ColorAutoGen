@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "9735083afe5d03bd86214b13bd6568f42e17f21b532d25d0d3555ddf56558d00"
+build_start_time: [1693512506, 123848000]
+build_end_time: [1693512506, 731254000]
+inputs:
+  "/Users/leyo/workspace/ColorAutoGen/.build/checkouts/swift-argument-parser/Sources/ArgumentParserToolInfo/ToolInfo.swift": [1693512029, 417582868]
