@@ -19,8 +19,9 @@ $ color-autogen -v <variable> -s <SOURCE_PATH> -o <OUTPUT_PATH>
 ```
 for autogen Demo Package
 ```
-$ color-autogen -v library -s Media.xcassets -o ../
+$ color-autogen -v yourNamePackage -s Media.xcassets -o ../
 ```
+yourNamePackage will generate YourNamePackageColor Package
 # Options:
 ```
 --variable: used for UIColor.<variable>.nameColor and package name '<Variable>Color'
