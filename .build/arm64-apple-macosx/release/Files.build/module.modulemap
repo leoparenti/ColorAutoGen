@@ -1,4 +1,0 @@
-module Files {
-    header "/Users/leyo/workspace/ColorAutoGen/.build/arm64-apple-macosx/release/Files.build/Files-Swift.h"
-    requires objc
-}
