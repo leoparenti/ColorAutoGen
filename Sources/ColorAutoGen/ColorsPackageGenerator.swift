@@ -22,6 +22,7 @@ public struct ColorsPackageGenerator: Generator {
                 Terminal.runXcode(path: package.folderPath)
         } catch {
                 print("ColorAutoGen[error]: \(error)" )
+                throw error
             }
     }
 
@@ -45,14 +46,14 @@ public struct ColorsPackageGenerator: Generator {
 //        return colors
 //    }
 
-    private func getColors(from path: String) throws -> [String] {
+    private func getColors(from path: String) throws -> [ColorString] {
         let colorSetSuffix = ".colorset"
         let assetsFolder = try Folder(path: path)
         let colorFolders = assetsFolder.subfolders.filter { (folder) -> Bool in
             folder.name.hasSuffix(colorSetSuffix)
         }
-        let colors = colorFolders.map { (folder) -> String in
-            return folder.name.replacingOccurrences(of: colorSetSuffix, with: "")
+        let colors = colorFolders.map { (folder) -> ColorString in
+            ColorString(folder.name.replacingOccurrences(of: colorSetSuffix, with: ""))
         }
         return colors
     }

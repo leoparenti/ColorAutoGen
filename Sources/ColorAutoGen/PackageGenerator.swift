@@ -13,7 +13,6 @@ struct PackageGenerator {
     private let source: String
     private let output: String
 
-
     init(variable: String, source: String, output: String) {
         self.variable = variable
         self.source = source
@@ -26,7 +25,7 @@ struct PackageGenerator {
                                                          sourceXCAssetPath: source,
                                                          outputFilePath: output)
         } catch let error  {
-            print("error:\(error)")
+            print("Generator error:\(error)")
             throw error
         }
         print("Successfuly generated \(variable.capitalized)Color Package at the provided path")

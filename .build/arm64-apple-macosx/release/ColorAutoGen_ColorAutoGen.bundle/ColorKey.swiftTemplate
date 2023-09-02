@@ -1,5 +1,0 @@
-public enum ColorKey: String, CaseIterable {
-
-{data}
-
-}
