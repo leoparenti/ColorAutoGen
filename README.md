@@ -32,3 +32,4 @@ yourNamePackage will generate YourNamePackageColor Package
 All three options are required for the command to run. For more details use: color-autogen --help
 
 ```
+# Autogen sample package:
