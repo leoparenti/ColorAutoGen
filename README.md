@@ -12,7 +12,7 @@ $ cd ColorAutoGen
 $ make
 ```
 
-Add this in your (~/.zshrc if using zsh) or (~/.bash_profile if using bash):
+Add this in your .zshrc if using zsh or .bash_profile if using bash:
 
 ```
 # Generator aliases
@@ -33,7 +33,7 @@ $ color-autogen -n generated -a Media.xcassets -o ../
 ```
 **generated** 
 - Package name: Genereted**Color**
-- variable to use in your Project (es. UIColor.variable.nameColor, Color.variable.nameColor)
+- variable to use in your Project (es. UIColor.generated.nameColor, Color.generated.nameColor)
 
 # Options:
 ```
@@ -48,7 +48,7 @@ $ color-autogen -n generated -a Media.xcassets -o ../
 --type:<optional>
     type of asset generator use (for now only color)
 
-All three options are required for the command to run. For more details use: color-autogen --help
+Three options are required for the command to run. For more details use: color-autogen --help
 
 ```
 # Autogen sample package:
