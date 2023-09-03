@@ -8,16 +8,30 @@ public struct AutoGenCommand: ParsableCommand {
     public static var configuration = CommandConfiguration.colorAutoGen
 
     @Option(name: .shortAndLong, help: .variableHelp)
-    var variable: String
+    var namevariable: String
 
-    @Option(name: .shortAndLong, help: .sourceHelp)
-    var source: String
+    @Option(name: .shortAndLong, help: .assetsPathHelp)
+    var assetsPath: String
 
     @Option(name: .shortAndLong, help: .outputHelp)
     var output: String
 
+    @Option(name: .shortAndLong, help: .outputHelp)
+    var version: String?
+
+    @Option(name: .shortAndLong, help: .outputHelp)
+    var type: String?
+
+    @Option(name: .shortAndLong, help: .outputHelp)
+    var suffix: String?
+
     public mutating func run() throws {
-        let packageGenerator = PackageGenerator(variable: variable, source: source, output: output)
+        let packageGenerator = PackageGenerator(namevariable: namevariable,
+                                                packageSuffix: suffix,
+                                                assetPath: assetsPath,
+                                                output: output,
+                                                version: version,
+                                                type: type)
         try packageGenerator.run()
     }
 }
@@ -27,13 +41,18 @@ extension ArgumentHelp {
         return ArgumentHelp(ColorAGConstants.option.variableHelp,
                             discussion: ColorAGConstants.option.variableHelp)
     }
-    static var sourceHelp: ArgumentHelp {
+    static var assetsPathHelp: ArgumentHelp {
         return ArgumentHelp(ColorAGConstants.option.sourceHelp,
                             discussion: ColorAGConstants.option.sourceHelp)
     }
     
     static var outputHelp: ArgumentHelp {
         return ArgumentHelp(ColorAGConstants.option.outputHelp,
+                            discussion: ColorAGConstants.option.outputHelp)
+    }
+
+    static var versionHelp: ArgumentHelp {
+        return ArgumentHelp(ColorAGConstants.config.version,
                             discussion: ColorAGConstants.option.outputHelp)
     }
 }

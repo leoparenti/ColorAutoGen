@@ -1,15 +1,26 @@
 import Foundation
-struct ColorPackage {
-    internal init(path: String, variable: String) {
-        self.path = path
-        self.variable = variable.normalize.firstLowercased
-    }
+struct PackageInfo {
 
     let path: String
     let variable: String
+    let suffix: String
+    let version: String
+    let type: AutoGenType
+
+    internal init(path: String,
+                  variable: String,
+                  suffix: String,
+                  version: String,
+                  type: String) {
+        self.path = path
+        self.variable = variable.normalize.firstLowercased
+        self.suffix = suffix
+        self.version = version
+        self.type = AutoGenType.color
+    }
 }
 
-extension ColorPackage {
+extension PackageInfo {
     var url: URL? {
         URL(string: path)
     }
@@ -17,7 +28,7 @@ extension ColorPackage {
         path + "/\(name)"
     }
     var name: String {
-        variable.firstUppercased + "Color"
+        variable.firstUppercased + suffix
     }
     var colorKeyFile: String {
         path + "/\(name)/Sources/\(name)/ColorKey.swift"
@@ -34,9 +45,5 @@ extension ColorPackage {
     }
     var xcTestPath: String {
         path + "/\(name)/Tests/\(name)Tests/\(name)Tests.swift"
-    }
-
-    var templateSuffix: String {
-        "Template"
     }
 }

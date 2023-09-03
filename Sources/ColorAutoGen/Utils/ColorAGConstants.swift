@@ -11,7 +11,16 @@ struct ColorAGConstants {
         static let sourceHelp = "Path of .xcassets to generate the package"
         static let outputHelp = "Path to create Package"
         static let variableHelp = "used for UIColor.<variable>.nameColor, package name '<Variable>Color'"
+        static let versionHelp = "set version string printed for autogen header"
+        static let typeHelp = "only color for now"
+        static let suffixHelp = "default suffix: 'Color' "
     }
+}
+
+enum AutoGenType: String {
+    case color = "c"
+    case image = "i"
+    case localise = "l"
 }
 
 extension ColorAGConstants {

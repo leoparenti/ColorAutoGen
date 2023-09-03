@@ -3,14 +3,14 @@ import Files
 
 extension ColorsPackageGenerator {
 
-    func createColorKey(package: ColorPackage, colors: [ColorString]) throws {
+    func createColorKey(package: PackageInfo, colors: [ColorString]) throws {
         let data = colors.map{ $0.rowCase }.joined(separator: "\n")
         let fileContent = Templates.load(.colorKey).assign(data: data)
         try fileContent.createFile(at: package.colorKeyFile)
         print("ColorAutoGen: created colors key")
     }
 
-    func createColorClass(package: ColorPackage, colors: [ColorString]) throws {
+    func createColorClass(package: PackageInfo, colors: [ColorString]) throws {
         let data = colors.map{ $0.rowColorClass }.joined(separator: "\n")
         let usage = usageColor.replacingOccurrences(of: "{first_color}", with: colors.randomElement()?.name ?? "")
         let all = (rowClassIndent + rowCaseIndent) + colors.map{ $0.name }.joined(separator: ", ")
@@ -23,7 +23,7 @@ extension ColorsPackageGenerator {
         print("ColorAutoGen: created Colors Class")
     }
 
-    func createUIColorClass(package: ColorPackage, colors: [ColorString]) throws {
+    func createUIColorClass(package: PackageInfo, colors: [ColorString]) throws {
         let data = colors.map{ $0.rowUIColorClass }.joined(separator: "\n")
         let usage = usageUIColor.replacingOccurrences(of: "{first_color}", with: colors.randomElement()?.name ?? "")
         let all = (rowClassIndent + rowCaseIndent) + colors.map{ $0.name }.joined(separator: ", ")
@@ -36,7 +36,7 @@ extension ColorsPackageGenerator {
         print("ColorAutoGen: created UIColors Class")
     }
 
-    func createXCTest(package: ColorPackage, colors: [ColorString]) throws {
+    func createXCTest(package: PackageInfo, colors: [ColorString]) throws {
         let data = colors.map{ $0.rowXCTest }.joined(separator: "\n")
         let fileContent = Templates.load(.xcTest).assign(data: data,
                                                          name: package.name,
@@ -74,13 +74,21 @@ extension String {
                 name: String = "",
                 variable: String = "",
                 usage: String = "",
-                all: String = "") -> String{
-        let header = "// generated with ColorAutogen"
+                all: String = "") -> String {
+        let header = "// generated \(String.today)"
         return self.replacingOccurrences(of: "{header}", with: header)
             .replacingOccurrences(of: "{usage}", with: usage)
             .replacingOccurrences(of: "{data}", with: data)
             .replacingOccurrences(of: "{name}", with: name)
             .replacingOccurrences(of: "{variable}", with: variable)
             .replacingOccurrences(of: "{all}", with: all)
+    }
+}
+
+extension String {
+    public static var today: String {
+        let form = DateFormatter()
+        form.dateStyle = .long
+        return form.string(from: Date())
     }
 }

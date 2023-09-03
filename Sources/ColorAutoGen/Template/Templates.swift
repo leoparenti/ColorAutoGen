@@ -11,7 +11,7 @@ public struct Templates {
     public static func load(_ name: Templates.Key) -> String {
         let filepath = Bundle.module.path(forResource: name.rawValue, ofType: "txt")
         guard let filepath else {
-            print("ColorAutoGen: erro load Template")
+            print("ColorAutoGen: error load Template \(name.rawValue)")
             return ""
         }
             do {

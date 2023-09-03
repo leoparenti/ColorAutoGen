@@ -4,15 +4,23 @@ import Files
 public struct ColorsPackageGenerator: Generator {
     typealias ColorName = String
 
-    func generatePackage(variable: String, sourceXCAssetPath: String, outputFilePath: String) throws {
-        
-        let package = ColorPackage(path: outputFilePath, variable: variable)
+    func generatePackage(namevariable: String,
+                         packageSuffix: String,
+                         assetPath: String,
+                         outputFilePath: String,
+                         version: String,
+                         type: String) throws { 
+        let package = PackageInfo(path: outputFilePath,
+                                  variable: namevariable,
+                                  suffix: packageSuffix,
+                                  version: version,
+                                  type: type)
         do {
                 try createFolder(package: package)
                 Terminal.packageCreate(path: package.folderPath)
-                try copy(package: package, from: sourceXCAssetPath)
+                try copy(package: package, from: assetPath)
 
-                let colors = try! getColors(from: sourceXCAssetPath)
+                let colors = try! getColors(from: assetPath)
                 try createColorKey(package: package, colors: colors)
                 try createColorClass(package: package, colors: colors)
                 try createUIColorClass(package: package, colors: colors)
@@ -26,12 +34,12 @@ public struct ColorsPackageGenerator: Generator {
             }
     }
 
-    func createFolder(package: ColorPackage) throws {
+    func createFolder(package: PackageInfo) throws {
         try FileManager.default.createDirectory(atPath: package.folderPath, withIntermediateDirectories: true, attributes: nil)
         print("ColorAutoGen: folder \(package.folderPath) created")
         }
 
-    func copy(package: ColorPackage, from xcassetPath: String) throws {
+    func copy(package: PackageInfo, from xcassetPath: String) throws {
         try FileManager.default.copyItem(atPath: xcassetPath, toPath: package.assetPath)
         print("ColorAutoGen: xcassets imported")
         }

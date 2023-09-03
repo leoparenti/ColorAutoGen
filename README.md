@@ -11,25 +11,42 @@ $ git clone https://github.com/leoparenti/ColorAutoGen.git
 $ cd ColorAutoGen
 $ make
 ```
+
+Add this in your (~/.zshrc if using zsh) or (~/.bash_profile if using bash):
+
+```
+# Generator aliases
+alias autogen-test='color-autogen -n generated -a Media.xcassets -o ../'
+```
 # Usage
 ```
-$ color-autogen --variable <variable> --source <SOURCE_PATH> --output <OUTPUT_PATH>
+$ color-autogen -n <namevariable> -a <ASSET_PATH> -o <OUTPUT_PATH> -v <VERSION> -t <TYPE>
 ```
 or
 ```
-$ color-autogen -v <variable> -s <SOURCE_PATH> -o <OUTPUT_PATH>
+$ color-autogen --namevariable <variable> --a <ASSET_PATH> --output <OUTPUT_PATH> --version <VERSION> --type <TYPE>
 ```
+
 for autogen Demo Package
 ```
-$ color-autogen -v yourNamePackage -s Media.xcassets -o ../
+$ color-autogen -n generated -a Media.xcassets -o ../
 ```
-yourNamePackage will generate YourNamePackage**Color** Package
+**generated** 
+- Package name: Genereted**Color**
+- variable to use in your Project (es. UIColor.variable.nameColor, Color.variable.nameColor)
+
 # Options:
 ```
---variable: used for UIColor.<variable>.nameColor and package name '<Variable>Color'
-
---source: Path of the color xcassets
---output: Path of the output Package
+--namevariable:<mandatory>
+        variable to use in your Project UIColor.<variable>.nameColor and package name '<Variable><Suffix>' (es: VariableColor)
+--assetPath:<mandatory>
+        Path of the colorxcassets
+--output:<mandatory>
+        Path of the output Package
+--version:<optional>
+        version to write in file of output Package (default no version)
+--type:<optional>
+    type of asset generator use (for now only color)
 
 All three options are required for the command to run. For more details use: color-autogen --help
 
